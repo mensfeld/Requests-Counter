@@ -1,0 +1,4 @@
+= Version 0.1.5
+* Added initializers
+= Version 0.1.0
+* Gem existence started
