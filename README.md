@@ -39,12 +39,14 @@ Class methods:
 * with_token(token, resource = nil, params ={}) - will give you back resource counter (if not found - will create one)
 * permitted?(token, resource = nil, params ={}) - will tell you is token permitted to resource - without counting attempts
 * permit?(token, resource = nil, params ={}) - same as above, but will count attempts
+* remaining(token, resource = nil, params ={}) - how much attempts left
 
 Instance methods:
 
 * permitted? - will tell you is token permitted to resource - without counting attempts
 * permit? - same as above, but will count attempts
 * reset! - will reset counter
+* remaining - how much attempts left
 
 For more examples view rspec.
 
