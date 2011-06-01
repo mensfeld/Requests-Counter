@@ -5,7 +5,7 @@ module MyRequestsCounter
     def add_my_migration
       timestamp = Time.now.strftime("%Y%m%d%H%M%S")
       source = "create_requests_counters_migration.rb"
-      target = "db/migrate/#{timestamp}_"+source
+      target = "db/migrate/#{timestamp}_create_requests_counters.rb"
       copy_file source, target
     end
 

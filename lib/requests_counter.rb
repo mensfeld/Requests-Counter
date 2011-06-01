@@ -57,6 +57,16 @@ class RequestsCounter < ActiveRecord::Base
     self.update_attributes(:attempts => 0)
   end
 
+  def self.remaining(token, resource = nil, params = {})
+    self.with_token(token, resource, params).remaining
+  end
+
+  def remaining
+    r = available_attempts - attempts
+    r = 0 if r < 0
+    r
+  end
+
   private
 
   def init_available_attempts

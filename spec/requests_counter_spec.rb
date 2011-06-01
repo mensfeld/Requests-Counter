@@ -132,4 +132,19 @@ describe RequestsCounter do
 
   end
 
+  context "when we make first request" do
+    it "should return us 9 remaining requests left" do
+      subject.permit?('127.0.0.1')
+      subject.with_token('127.0.0.1').remaining.should == 9
+    end
+  end
+
+  context "when we request something a lot of times" do
+    it "should not left us any remaining requests" do
+      20.times { subject.permit?('127.0.0.1') }
+      subject.with_token('127.0.0.1').remaining.should == 0
+      subject.remaining('127.0.0.1').should == 0
+    end
+  end
+
 end
