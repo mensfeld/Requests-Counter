@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{requests_counter}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maciej Mensfeld"]
-  s.date = %q{2011-06-01}
+  s.date = %q{2011-06-10}
   s.description = %q{Requests Counter allows you to count attemps to get resource. You can then decide if attemp should be stopped (banned).}
   s.email = %q{maciej@mensfeld.pl}
   s.extra_rdoc_files = ["CHANGELOG.rdoc", "README.md", "lib/generators/my_requests_counter/install_generator.rb", "lib/generators/my_requests_counter/templates/create_requests_counters_migration.rb", "lib/generators/my_requests_counter/templates/requests_counter_init.rb", "lib/requests_counter.rb"]

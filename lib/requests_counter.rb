@@ -16,11 +16,11 @@ class RequestsCounter < ActiveRecord::Base
 
   # Searches for instance element with provided token and resource
   # and if it does not find one - will create new and return it to us
-  def self.with_token(token, resource = nil, params = {})
-    unless el = self.where(:token => token, :resource => resource).first
+  def self.with_token(token, target = nil, params = {})
+    unless el = self.where(:token => token.to_s, :resource => target.to_s).first
       el = self.create({
-          :token => token,
-          :resource => resource
+          :token => token.to_s,
+          :resource => target.to_s
         }.merge(params))
     end
     el

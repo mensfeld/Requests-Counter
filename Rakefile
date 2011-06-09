@@ -2,7 +2,7 @@ require 'rubygems'
 require 'rake'
 require 'echoe'
 
-Echoe.new('requests_counter', '0.1.5') do |p|
+Echoe.new('requests_counter', '0.1.6') do |p|
   p.description    = "Requests Counter allows you to count attemps to get resource. You can then decide if attemp should be stopped (banned)."
   p.url            = "https://github.com/mensfeld/Requests-Counter"
   p.author         = "Maciej Mensfeld"
