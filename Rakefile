@@ -7,6 +7,7 @@ Echoe.new('requests_counter', '0.1.6') do |p|
   p.url            = "https://github.com/mensfeld/Requests-Counter"
   p.author         = "Maciej Mensfeld"
   p.email          = "maciej@mensfeld.pl"
+  p.license        = 'MIT'
   p.ignore_pattern = ["tmp/*", "script/*"]
   p.development_dependencies = ["rspec >=2.0.0"]
   p.dependencies = ["activerecord"]
